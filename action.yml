@@ -1,0 +1,20 @@
+name: "SCA sbom generation"
+description: "Generate a Software Bill of Materials(sbom) for a given repository"
+author: "Kaushik Vaida"
+inputs:
+  repo_url:
+    description: 'The Repository URL to generate an sbom'
+    required: false
+    default: '${{ github.event.repository.url }}'
+  repo_name:
+    description: 'The name of the repository'
+    required: false
+    default: '${{ github.event.repository.name }}'
+  output:
+    description: ''
+outputs:
+  output: 
+    description: "output of task"
+runs:
+  using: "docker"
+  image: "Dockerfile"
