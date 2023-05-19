@@ -2,8 +2,6 @@ FROM alpine:latest
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENV DTRACK_API_KEY =  ${{ secrets.DTRACK_API_KEY }} 
-
 RUN apk add --update curl
 
 #Install Trivy for scanning repos and generating sboms
