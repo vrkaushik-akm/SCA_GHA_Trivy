@@ -10,10 +10,6 @@ inputs:
     description: 'The name of the repository'
     required: false
     default: '${{ github.event.repository.name }}'
-  dtrack_api_key:
-    description: "The API key for dtrack"
-    required: false
-    default: '${{ secrets.DTRACK_API_KEY }}'
   output:
     description: ''
 outputs:
@@ -22,3 +18,5 @@ outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    DTRACK_API_KEY: '${{ secrets.DTRACK_API_KEY }}'
