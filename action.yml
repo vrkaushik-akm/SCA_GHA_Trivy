@@ -18,5 +18,5 @@ outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  env:
+  secrets:
     DTRACK_API_KEY: '${{ secrets.DTRACK_API_KEY }}'
