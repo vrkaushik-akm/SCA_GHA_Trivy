@@ -10,7 +10,7 @@ inputs:
     description: 'The name of the repository'
     required: false
     default: '${{ github.event.repository.name }}'
-  dtrack:api_key:
+  dtrack_api_key:
     description: "The API key for dtrack"
     required: false
     default: ''
