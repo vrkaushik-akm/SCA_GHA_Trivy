@@ -18,3 +18,5 @@ outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ secrets.DTRACK_API_KEY }}
