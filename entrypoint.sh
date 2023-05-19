@@ -8,6 +8,7 @@ trivy repo --format cyclonedx --scanners vuln --output trivy.json $INPUT_REPO_UR
 
 
 echo "bom uploading"
+cat trivy.json
 echo "${INPUT_DTRACK_API_KEY}"
 echo "${INPUT_REPO_URL}"
 echo "${INPUT_REPO_NAME}"
